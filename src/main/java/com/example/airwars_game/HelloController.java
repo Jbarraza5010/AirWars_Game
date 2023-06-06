@@ -1,7 +1,9 @@
 package com.example.airwars_game;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
@@ -10,17 +12,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Classes.Client;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class HelloController implements Initializable {
-    @FXML
-    private Label welcomeText;
 
+    @FXML
+    private ImageView worldmap;
     private Client client;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
