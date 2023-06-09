@@ -17,9 +17,10 @@ import javafx.scene.image.ImageView;
 
 public class HelloController implements Initializable {
 
+    private Client client;
+
     @FXML
     private ImageView worldmap;
-    private Client client;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
