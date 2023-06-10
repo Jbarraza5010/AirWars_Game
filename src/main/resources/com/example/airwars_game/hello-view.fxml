@@ -10,5 +10,6 @@
          <image>
             <Image url="@Mapa%20de%20juego.jpg" />
          </image></ImageView>
+      <ImageView fx:id="asia" fitHeight="98.0" fitWidth="150.0" layoutX="772.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

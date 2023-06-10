@@ -12,8 +12,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Classes.Client;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 public class HelloController implements Initializable {
 
@@ -21,6 +25,9 @@ public class HelloController implements Initializable {
 
     @FXML
     private ImageView worldmap;
+
+    @FXML
+    private ImageView asia;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -31,5 +38,8 @@ public class HelloController implements Initializable {
             e.printStackTrace();
             System.out.println("Error conectandose el servidor");
         }
+
+
+        client.recieveMessageFromServer();
     }
 }
