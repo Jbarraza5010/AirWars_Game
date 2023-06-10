@@ -24,15 +24,14 @@ public class Client {
         }
     }
 
-    public LinkedList recieveMessageFromServer(){
-        LinkedList message = new LinkedList();
-        message.insertFirst("hey");
+    public void recieveMessageFromServer(ImageView africa, ImageView asia, ImageView atlantico, ImageView europa, ImageView indico, ImageView norteamerica, ImageView oceania, ImageView pacifico1, ImageView pacifico2, ImageView suramerica){
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while(socket.isConnected()){
                     try{
                         String posicionMapa = bufferedReader.readLine();
+                        HelloController.mapa(posicionMapa, africa, asia, atlantico, europa, indico, norteamerica, oceania, pacifico1, pacifico2, suramerica);
 
                     }catch(IOException e){
                         e.printStackTrace();
@@ -43,8 +42,6 @@ public class Client {
                 }
             }
         }).start();
-        message.displayList();
-        return message;
     }
 
     public void closeAll(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter){

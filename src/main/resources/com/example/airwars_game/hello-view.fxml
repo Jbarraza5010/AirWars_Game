@@ -10,6 +10,15 @@
          <image>
             <Image url="@Mapa%20de%20juego.jpg" />
          </image></ImageView>
-      <ImageView fx:id="asia" fitHeight="98.0" fitWidth="150.0" layoutX="772.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="asia" fitHeight="79.0" fitWidth="116.0" layoutX="769.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="europa" fitHeight="79.0" fitWidth="116.0" layoutX="534.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="africa" fitHeight="79.0" fitWidth="116.0" layoutX="572.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="oceania" fitHeight="79.0" fitWidth="116.0" layoutX="914.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="indico" fitHeight="79.0" fitWidth="116.0" layoutX="736.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="norteAmerica" fitHeight="79.0" fitWidth="116.0" layoutX="198.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="surAmerica" fitHeight="79.0" fitWidth="116.0" layoutX="339.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pacifico1" fitHeight="79.0" fitWidth="116.0" layoutX="69.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="atlantico" fitHeight="79.0" fitWidth="116.0" layoutX="372.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pacifico2" fitHeight="79.0" fitWidth="116.0" layoutX="1014.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
