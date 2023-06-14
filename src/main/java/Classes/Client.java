@@ -7,11 +7,18 @@ import javafx.scene.image.ImageView;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * Clase del cliente
+ */
 public class Client {
     private Socket socket;
     private BufferedWriter bufferedWriter;
     private BufferedReader bufferedReader;
 
+    /**
+     * Clase constructora del cliente
+     * @param socket
+     */
     public Client(Socket socket){
         try{
             this.socket = socket;
@@ -24,14 +31,28 @@ public class Client {
         }
     }
 
-    public void recieveMessageFromServer(ImageView africa, ImageView asia, ImageView atlantico, ImageView europa, ImageView indico, ImageView norteamerica, ImageView oceania, ImageView pacifico1, ImageView pacifico2, ImageView suramerica){
+    /**
+     * Metodo que recibe mensaje del controller
+     * @param africa
+     * @param asia
+     * @param atlantico
+     * @param europa
+     * @param indico
+     * @param norteamerica
+     * @param oceania
+     * @param pacifico1
+     * @param pacifico2
+     * @param suramerica
+     */
+    public void recieveMessageFromServer(ImageView africa, ImageView asia, ImageView atlantico, ImageView europa, ImageView indico, ImageView norteamerica, ImageView oceania, ImageView pacifico1, ImageView pacifico2, ImageView suramerica,
+                                         ImageView africaA, ImageView asiaA, ImageView atlanticoA, ImageView europaA, ImageView indicoA, ImageView norteamericaA, ImageView oceaniaA, ImageView pacifico1A, ImageView pacifico2A, ImageView suramericaA){
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while(socket.isConnected()){
                     try{
-                        String posicionMapa = bufferedReader.readLine();
-                        HelloController.mapa(posicionMapa, africa, asia, atlantico, europa, indico, norteamerica, oceania, pacifico1, pacifico2, suramerica);
+                        String message = bufferedReader.readLine();
+                        HelloController.mapa(message, africa, asia, atlantico, europa, indico, norteamerica, oceania, pacifico1, pacifico2, suramerica);
 
                     }catch(IOException e){
                         e.printStackTrace();
@@ -44,6 +65,12 @@ public class Client {
         }).start();
     }
 
+    /**
+     * Metodo que cierra el socket entre el cliente y el server
+     * @param socket
+     * @param bufferedReader
+     * @param bufferedWriter
+     */
     public void closeAll(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter){
         try{
             if (bufferedReader != null){
